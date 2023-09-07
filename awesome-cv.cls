@@ -160,18 +160,18 @@
 %                Configuration for fonts
 %-------------------------------------------------------------------------------
 % Set the FontAwesome font to be up-to-date.
-\newfontfamily\FA[Path=\@fontdir]{FontAwesome}
+\setfontfamily\FA[Path=/usr/local/share/fonts/]{FontAwesome.otf}
 % Set font for header (default is Roboto)
-\newfontfamily\headerfont[
-  Path=\@fontdir,
+\setfontfamily\headerfont[
+  Path=/usr/local/share/fonts/,
   UprightFont=*-Regular,
   ItalicFont=*-Italic,
   BoldFont=*-Bold,
   BoldItalicFont=*-BoldItalic,
 ]{Roboto}
 
-\newfontfamily\headerfontlight[
-  Path=\@fontdir,
+\setfontfamily\headerfontlight[
+  Path=/usr/local/share/fonts/,
   UprightFont=*-Thin,
   ItalicFont=*-ThinItalic,
   BoldFont=*-Medium,
@@ -527,12 +527,15 @@
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \ifempty{#1#3#4}
       {\entrytitlestyle{#2} \\
-        \multicolumn{1}{L{\textwidth}}{\descriptionstyle{#5}}}
-      {\ifempty{#2#3}
-          {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-          {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-            \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
         \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
+      {\ifempty{#2#3}
+        {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+        {\ifempty{#5}
+          {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+           \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+          {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
+           \entrypositionstyle{#1} & \entrydatestyle{#4} \\
+           \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}}}
   \end{tabular*}%
 }
 
