@@ -1,4 +1,4 @@
-\cvsection{Projects}
+\cvsection{Open-Source Contributions}
 
 \begin{cventries}
   \cventry
@@ -12,7 +12,7 @@
         \item { More than \textit{300}\includegraphics[width=3.5mm]{image.png} on \textit{GitHub} }
         \item { Created under the supervision of \textbf{Yandex Research} researchers }
       \end{cvitems}
-    }
+    },
 
   \cventry
     {} % Empty position
@@ -25,17 +25,31 @@
         \item { Based on the officialy published \textbf{Megatron-LM} implementation }
       \end{cvitems}
     }
-    
+
   \cventry
     {} % Empty position
-    {\,\faGithub\acvHeaderIconSep\href{https://github.com/BlackSamorez/ebanko}{NLP bot}} % Project
+    {\includegraphics[width=3.5mm]{hf.jpg}\acvHeaderIconSep\href{https://huggingface.co/docs/transformers/main/model_doc/llama}{LLaMA implementation for transformers}} % Project
     {} % Empty location
     {} % Empty date
     {
       \begin{cvitems} % Description(s) bullet points
-        \item {A Telegram \textbf{bot} with a fine-tuned \textbf{Language Model}, automatic \textbf{data collection} and preparation}
-        \item {Easily deployable with \textbf{Docker compose}}
-		\item {Full deployment with \textbf{Telegram API}, \textbf{backend} and \textbf{metrics}}
+        \item {Took part in adapting the \textbf{LLaMA} model to the \textbf{Hugging Face transformers} library}
+        \item {Fixed the positional embedding errors and optimized past key-value handling}
+      \end{cvitems}
+    }
+    
+  \cventry
+    {} % Empty position
+    {\faGithub\acvHeaderIconSep\href{https://github.com/BlackSamorez/ebanko}{NLP Bot Project}} % Project
+    {} % Empty location
+    {} % Empty date
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {Designed an automatic data collection system to extract thousands of dialogues from internet forums and published them as a dataset}
+        \item {Refined the collected data using a pretrained sentiment analysis \textbf{BERT} model}
+        \item {Fine-tuned a \textbf{GPT-2} model for \textbf{chatbot} purposes on the refined dataset}
+        \item {Developed the code for a \textbf{Telegram bot} deployment, utilizing the trained model}
+        \item {Published an article on \textbf{Habr} about the project, reaching the daily top-1 in the \textbf{ML} section}
       \end{cvitems}
     }
     
